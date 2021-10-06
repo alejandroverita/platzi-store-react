@@ -39,7 +39,6 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
-            justify-items: center;
         }
 
         .logo{
@@ -64,42 +63,51 @@
             text-align:center;
         }
 
-        .email-image{
+        .form{
             display: flex;
-            align-items:center;
-            justify-content:center;
-
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 24px;
- 
-            background-color: var(--text-input-field);
+            flex-direction: column ;
         }
 
-        .email-image img {
-            display: flex;
+        .form a {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: var(--hospital-green);
+            font-size: var(--sm);
+        }
 
-            width: 80px;
+        .form a:hover{
+            color: var(--primary-button-hover);
+        }
+
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
         }
         
+        .input {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--md);
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
         .primary-button{
-            /* 1 Posicionamiento */
-            /* 2. Box Model */
             height: 40px;
             width: 100%;
             border: none;
             border-radius: 12px;
 
-            /* Tipografia */
             color: var(--white);
             font-size: var(--md);
             font-weight: bold;
 
-            /* Visuales */
             background-color: var(--hospital-green);
 
-            /* Otros */
             cursor: pointer;
         }
 
@@ -107,24 +115,40 @@
             background-color: var(--primary-button-hover);
         }
 
-        .resend{
-            font-size: var(--sm);
-            color: var(--very-light-pink);
 
-        }
+        .signUp{
+            
+            margin-top: 24px;
+            
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            background-color: var(--white);
 
-        .resend a {
+            font-size: var(--md);
+            font-weight: bold;
+
             color: var(--hospital-green);
-            text-decoration: none;
+
+            cursor: pointer;
         }
 
-        .resend a:hover{
-            color: var(--primary-button-hover);
+        .signUp:hover{
+            background-color: var(--hospital-green);
+            color: var(--white);
         }
+
 
         @media (max-width: 640px){
             .logo{
                 display: block;
+            }
+
+            .signUp{
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 24px;
             }
         }
         
@@ -134,21 +158,25 @@
     <div class="login">
         <div class="container">
             <img src="./assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">
-                Email has been sent!
-            </h1>
-            <p class="subtitle">
-                Please check your inbox for instructions on how to reset the password
-            </p>
-            <div class="email-image">
-                <img src="./assets/icons/email.svg" alt="email image">
-            </div>
-            <button type='button' class="primary-button login-button">
-                Login
-            </button>
-            <p class='resend'>
-                Didn't receive the email? <a href="/">Resend</a>
-            </p>
+            
+            <form action="/" class="form">
+                <label for="email" class="label">
+                    Email address
+                </label>
+                <input type="text" id="email" class="input input-email" placeholder="example@mail.com"/>
+
+                <label for="password" class="label">
+                    Password
+                </label>
+                <input type="password" id="password" class="input input-password" placeholder='*******'/>
+
+                <input type='submit' value="Log in" class="primary-button login-button" />
+
+                <a href="./screenPassword.html" >Forgot my password</a> 
+            </form>
+
+            <button class="signUp">Sign up</button>
+         
         </div>
     </div>
 </body>
