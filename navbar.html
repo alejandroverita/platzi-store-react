@@ -31,13 +31,109 @@
             margin:0;
             padding:0;
         }
+
+        .menu {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            /* width: 100%; */
+
+            padding: 0 24px;
+            margin-top: 12px;
+            border-bottom: 1px solid var(--very-light-pink)
+        }
+
+        .logo{
+            
+            width: 100px;
+        }
+        
+        .navbar-left ul,
+        .navbar-right ul {
+            display: flex;
+            align-items: center;
+            
+            height: 60px;
+            
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .navbar-left ul li a {
+            text-decoration: none;
+            font-size: 12px;
+            color: var(--very-light-pink);
+            margin: 0 12px; 
+            border: 1px solid var(--white);
+            padding: 0px;
+            border-radius: 4px;
+
+            cursor: pointer;
+        }
+
+        .navbar-left ul li a:hover{
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+        }
+
+        .navbar-left, .navbar-right{
+            display: flex;
+        }
+
+        .navbar-email{
+            color: var(--very-light-pink);
+            font-size: 12px;
+            margin-right: 12px;
+        }
+
+        .navbar-shopping-cart {
+            position: relative
+        }
+
+        .navbar-shopping-cart span{
+            position: absolute;
+            top: -10px;
+            right: -7px;
+            
+            height: 16px;
+            width: 16px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 640px) {
+            .menu{
+                display: block;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar-email {
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 <body>
     <nav>
-        <img src="./assets/icons/icon_menu.svg" alt="Burger Menu">
+        <img src="./assets/icons/icon_menu.svg" class='menu' alt="Burger Menu">
         <div class="navbar-left">
-            <img src="./assets/logos/logo_yard_sale.svg" alt="Logo">
+            <img src="./assets/logos/logo_yard_sale.svg" class='logo' alt="Logo">
             <ul>
                 <li><a href="/">All</a></li>
                 <li><a href="/">Clothes</a></li>
@@ -48,11 +144,13 @@
             </ul>
         </div>
         <div class="navbar-right">
-            <li>example@gmail.com</li>
-            <li class='navbar-shopping-cart'>
-                <img src="./assets/icons/icon_shopping_cart.svg" alt="">
-                <div>2</div>
-            </li>
+            <ul>
+                <li class="navbar-email">example@gmail.com</li>
+                <li class='navbar-shopping-cart'>
+                    <img src="./assets/icons/icon_shopping_cart.svg" alt="Shop">
+                    <span>2</span>
+                </li>
+            </ul>
         </div>
     </nav>
 </body>
