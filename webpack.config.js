@@ -1,5 +1,6 @@
 const path = require('path'); // Nos permite saber donde esta ubicado el proyecto
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //traemos el plugin de html
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js', // punto de entrada
@@ -7,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'), // se crea la carpeta dist
         filename: 'bundle.js', //nombre del archivo resultante
     },
+    mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx'], //extensiones que tendran que resolverse
     },
@@ -26,6 +28,14 @@ module.exports = {
                         loader: 'html-loader'
                     }
                 ]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ],
             }
         ]
     },
@@ -33,8 +43,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html', // archivo raíz a transformar
             filename: './index.html' // el archivo resultante
-        })
-    ]
-
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+        }),
+    ],
+    devServer:{
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 3000,
+    }
 
 }
