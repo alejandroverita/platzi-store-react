@@ -1,0 +1,7 @@
+//agrega la configuracion que vamos a utilizar para que Babel pueda reconocer los presets que acabamos de agregar
+{
+    "presets":[
+        "@babel/preset-env", //compila es5 es6 todo js moderno
+        "@babel/preset-react" //trabaja con jsx y toda la sintaxis de react 
+    ]
+}
