@@ -1,11 +1,12 @@
 import React from 'react';
-import '../styles/Login.scss';
 
-const Login = () => {
+import '../styles/NewPassword.scss';
+
+const NewPassword = () => {
     return (
-        <div className="login">
-            <div className="container">
-                <img src="./assets/logos/logo_yard_sale.svg" alt="logo" className="logo"/>
+        <div className="NewPassword">
+            <div className="NewPassword-container">
+                <img src="./assets/logos/logo_yard_sale.svg" alt="logo" className="logo" />
                 <h1 className="title">
                     Create a new password
                 </h1>
@@ -29,4 +30,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default NewPassword;

@@ -1,0 +1,58 @@
+@use "./vars";
+
+.my-order {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.ProductInfo {
+  display: grid;
+  /* grid-template-rows: auto 1fr auto; */
+}
+
+.product-info {
+  margin: 0 24px;
+}
+
+.product-info p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-bottom: 4px;
+}
+
+.product-info p:nth-child(2) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.product-info p:nth-child(3) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.primary-button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+
+  color: var(--white);
+  font-size: var(--md);
+  font-weight: bold;
+
+  background-color: var(--hospital-green);
+
+  cursor: pointer;
+}
+
+.add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

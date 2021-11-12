@@ -1,0 +1,28 @@
+@use "./vars";
+
+.ProductDetail {
+  position: absolute;
+  right: 0;
+  width: 360px;
+  padding-bottom: 24px;
+}
+
+.ProductDetail-title-container {
+  display: flex;
+}
+
+.ProductDetail-title-container img {
+  transform: rotate(180deg);
+  margin-right: 20px;
+}
+
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  .ProductDetail {
+    width: 100%;
+  }
+}

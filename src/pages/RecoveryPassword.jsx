@@ -3,8 +3,8 @@ import '../styles/RecoveryPassword.scss';
 
 const RecoveryPassword = () => {
     return (
-        <div className="login">
-            <div className="container">
+        <div className="RecoveryPassword">
+            <div className="RecoveryPassword-container">
                 <img src="./assets/logos/logo_yard_sale.svg" alt="logo" className="logo" />
                 <h1 className="title">
                     Email has been sent!

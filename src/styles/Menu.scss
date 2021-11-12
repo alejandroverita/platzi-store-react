@@ -1,0 +1,42 @@
+@use "./vars";
+
+.Menu {
+  width: 10rem;
+  height: auto;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 0.6rem;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.Menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Menu ul li {
+  text-align: end;
+}
+
+.Menu ul li:last-child {
+  padding-top: 24px;
+  border-top: 1px solid var(--very-light-pink);
+}
+
+.Menu ul li:last-child a {
+  color: var(--hospital-green);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.Menu ul li:nth-child(1),
+.Menu ul li:nth-child(2) {
+  font-weight: bold;
+}
+
+.Menu ul li a {
+  display: inline-block;
+  color: var(--black);
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
