@@ -12,11 +12,11 @@ const ProductItem = () => {
 					<p>Bike</p>
 				</div>
 				<figure>
-					<img src="./icons/bt_add_to_cart.svg" alt="" />
+					<img src="../../assets/icons/bt_add_to_cart.svg" alt="Add to cart" />
 				</figure>
 			</div>
 		</div>
     );
 }
 
-export default ProductItem;
+export default ProductItem; 

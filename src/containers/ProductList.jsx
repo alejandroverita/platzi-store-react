@@ -9,6 +9,9 @@ const ProductList = () => {
         <section className="main-container">
 			<div className="ProductList">
 				<ProductItem />
+				<ProductItem />
+				<ProductItem />
+				<ProductItem />
 			</div>
 		</section>
     );

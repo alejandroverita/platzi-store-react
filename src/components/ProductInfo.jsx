@@ -15,7 +15,7 @@ const ProductInfo = () => {
             <p>Bike</p>
             <p>With its funcional and practical interio, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen or workspace</p>
             <button class='primary-button add-to-cart-button'>
-                <img src="./assets/icons/bt_add_to_cart.svg" alt="" />
+                <img src="../../assets/icons/bt_add_to_cart.svg" alt="" />
                 Add to cart
             </button>
         </div>

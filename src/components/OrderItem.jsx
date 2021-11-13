@@ -10,7 +10,7 @@ const OrderItem = () => {
             </figure>
             <p>Bike</p>
             <p>$120.00</p>
-            <img src="./assets/icons/icon_close.png" alt="close" />
+            <img src="../../assets/icons/icon_close.png" alt="close" />
         </div> 
     );
 }
