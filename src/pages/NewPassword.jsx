@@ -1,12 +1,14 @@
 import React from 'react';
 
+import logo from '@logos/logo_yard_sale.svg';
+
 import '../styles/NewPassword.scss';
 
 const NewPassword = () => {
     return (
         <div className="NewPassword">
             <div className="NewPassword-container">
-                <img src="../../assets/logos/logo_yard_sale.svg" alt="logo" className="logo" />
+                <img src={logo} alt="logo" className="logo" />
                 <h1 className="title">
                     Create a new password
                 </h1>

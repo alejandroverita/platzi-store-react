@@ -1,12 +1,14 @@
 import React from 'react';
 
+import logo from '@logos/logo_yard_sale.svg';
+
 import '../styles/Login.scss';
 
 const Login = () => {
     return (
         <div className="Login">
         <div className="Login-container">
-            <img src="../../assets/logos/logo_yard_sale.svg" alt="logo" className="logo" /> 
+            <img src={logo} alt="logo" className="logo" /> 
             
             <form action="/" className="form">
                 <label for="email" className="label">
@@ -18,14 +20,11 @@ const Login = () => {
                     Password
                 </label>
                 <input type="password" id="password" className="input input-password" placeholder='*******'/>
-
-                <input type='submit' value="Log in" className="primary-button login-button" />
-
-                <a href="./screenPassword.html" >Forgot my password</a> 
             </form>
-
-            <button className="signUp">Sign up</button>
-         
+            <div className="button-container">
+                <button type='button' value='Log in' className="primary-button login-button">Sign up</button>
+                <a href="./recovery-password" >Forgot my password</a> 
+            </div>
         </div>
     </div>
     );

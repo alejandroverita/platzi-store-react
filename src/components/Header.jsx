@@ -4,13 +4,14 @@ import '@styles/Header.scss';
 
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
+import shoppingCart from '@icons/icon_shopping_cart.svg'
 
 const Header = () => {
     return (
         <nav>
             <img src={menu} className='menu' alt="Burger Menu" />
             <div className="navbar-left">
-                <img src="../../assets/logos/logo_yard_sale.svg" className='logo' alt="Logo" />
+                <img src={logo} className='nav-logo' alt="Logo" />
                 <ul>
                     <li><a href="/">All</a></li>
                     <li><a href="/">Clothes</a></li>
@@ -24,7 +25,7 @@ const Header = () => {
                 <ul>
                     <li className="navbar-email">example@gmail.com</li>
                     <li className='navbar-shopping-cart'>
-                        <img src="../../assets/icons/icon_shopping_cart.svg" alt="Shop" />
+                    <img src={shoppingCart} alt="Shop" />
                         <span>2</span>
                     </li>
                 </ul>

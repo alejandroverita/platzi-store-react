@@ -2,6 +2,8 @@ import React from 'react';
 
 import ShoppingCartItem from './ShoppingCartItem';
 
+import BtAddToCart from '@icons/bt_add_to_cart.svg';
+
 import '../styles/ProductInfo.scss';
 
 const ProductInfo = () => {
@@ -15,7 +17,7 @@ const ProductInfo = () => {
             <p>Bike</p>
             <p>With its funcional and practical interio, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen or workspace</p>
             <button class='primary-button add-to-cart-button'>
-                <img src="../../assets/icons/bt_add_to_cart.svg" alt="" />
+                <img src={BtAddToCart} alt="Add" />
                 Add to cart
             </button>
         </div>
