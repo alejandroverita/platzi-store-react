@@ -1,32 +1,50 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import logo from '@logos/logo_yard_sale.svg';
 
 import '../styles/Login.scss';
 
 const Login = () => {
+    const form = useRef(null);
+
+    const handleSubmit = (event) => {
+		event.preventDefault();
+        //Genera una referencia al elemento y podremos acceder a los valores por medio de ‘current’, y por este medio obtener lo que estamos typeando según sea el caso y poderlo transmitir a donde lo necesitemos.
+        const formData = new FormData(form.current);
+
+        const data = {
+            username: formData.get('email'),
+            password: formData.get('password'),
+
+        }
+
+        console.log(data)
+    }
+
     return (
         <div className="Login">
-        <div className="Login-container">
-            <img src={logo} alt="logo" className="logo" /> 
-            
-            <form action="/" className="form">
-                <label for="email" className="label">
-                    Email address
-                </label>
-                <input type="text" id="email" className="input input-email" placeholder="example@mail.com"/>
-
-                <label for="password" className="label">
-                    Password
-                </label>
-                <input type="password" id="password" className="input input-password" placeholder='*******'/>
-            </form>
-            <div className="button-container">
-                <button type='button' value='Log in' className="primary-button login-button">Sign up</button>
-                <a href="./recovery-password" >Forgot my password</a> 
-            </div>
-        </div>
-    </div>
+			<div className="Login-container">
+				<img src={logo} alt="logo" className="logo" />
+				<form action="/" className="form" ref={form}>
+					<label htmlFor="email" className="label">Email address</label>
+					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
+					<label htmlFor="password" className="label">Password</label>
+					<input type="password" name="password" placeholder="*********" className="input input-password" />
+					<button
+						
+						onClick={handleSubmit}
+						className="primary-button login-button">
+						Log in
+					</button>
+					<a href="/" className='forgot-password'>Forgot my password</a>
+				</form>
+				<button
+					className="secondary-button signup-button"
+				>
+					Sign up
+				</button>
+			</div>
+		</div >
     );
 }
 
