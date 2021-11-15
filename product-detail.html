@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Product Detail</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #acd0b2;
+            --primary-button-hover: #5ab865;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin:0;
+            padding:0;
+        }
+
+        .product-detail{
+            position: absolute;
+            right: 0;
+            width: 360px;
+            padding-bottom: 24px;
+        }
+
+        .product-img{
+            position: relative;
+        }
+
+        .product-img img:nth-child(1){
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 12px;
+            background-color: var(--white);
+            border-radius: 50%;
+        }
+
+        .product-img img:nth-child(1):hover{
+            cursor: pointer
+        }
+
+        .product-img img:nth-child(2){
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+
+        /* POINTS */
+
+        .points {
+            display: flex;
+            justify-content: center;
+        }
+        .points li {
+            list-style: none;
+            margin-left: 15px;
+        }
+        .points button {
+            background-color: var(--white);
+            border: solid 1px var(--hospital-green);
+            border-radius: 50%;
+            height: 8px;
+            padding: 1px;
+            width: 8px;
+        }
+        .points .active {
+            border: solid 1px var(--hospital-green);
+            background-color: var(--hospital-green);
+        }
+
+        /* PRODUCT INFO */
+        
+        .product-info{
+            margin: 0 24px;
+        }
+
+        .product-info p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-bottom: 4px;
+        }
+
+        .product-info p:nth-child(2){
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .product-info p:nth-child(3){
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+
+        .primary-button{
+            height: 40px;
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+
+            color: var(--white);
+            font-size: var(--md);
+            font-weight: bold;
+
+            background-color: var(--hospital-green);
+
+            cursor: pointer;
+        }
+
+        .add-to-cart-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+
+        @media(max-width: 640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class='product-detail'>
+        <div class="product-img">
+            <img src="./assets/icons/icon_close.png" alt="Close">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike">
+        </div>
+
+        <div class="points">
+            <li><button class="active"></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+        </div>
+
+        <div class="product-info">
+            <p>$35,00</p>
+            <p>Bike</p>
+            <p>With its funcional and practical interio, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen or workspace</p>
+            <button class='primary-button add-to-cart-button'>
+                <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                Add to cart
+            </button>
+        </div>
+    </aside>
+    
+</body>
+</html>
