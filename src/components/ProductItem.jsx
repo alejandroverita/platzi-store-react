@@ -32,11 +32,11 @@ const ProductItem = ({product}) => {
 				</div>
 				{!addedToCart ?
 					<figure onClick ={()=>addToCartHandler(product)}>
-						<img src={BtAddToCartImage} alt="Add to cart" />
+						<img className='pointer' src={BtAddToCartImage} alt="Add to cart" />
 					</figure>
 				:
 				<figure onClick={()=>removefromCartHandler(product)}>
-					<img src={iconClose} alt="Close" />
+					<img className='pointer' src={iconClose} alt="Close" />
 				</figure>
 				}
 				
