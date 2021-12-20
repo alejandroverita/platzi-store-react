@@ -11,7 +11,8 @@
   bottom: auto;
   border-radius: 6px;
   border: 1px solid var(--very-light-pink);
-  animation: swipeLeft 0.26s ease;
+  transition: 1s ease;
+  animation: swipeLeft 0.5s ease forwards;
 }
 
 @keyframes swipeLeft {
@@ -34,6 +35,28 @@
   font-size: var(--lg);
   font-weight: bold;
 }
+
+.MyOrder-content {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.MyOrder-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.MyOrder-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.MyOrder-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.MyOrder-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .order {
   display: grid;
   grid-template-columns: auto 1fr;

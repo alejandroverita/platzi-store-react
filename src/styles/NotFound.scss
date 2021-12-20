@@ -1,7 +1,7 @@
 @use "./vars";
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 
-.container {
+.NotFound {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,32 @@ h2 {
   font-weight: bold;
 }
 
+.NotFound-rows {
+  display: grid;
+  /* grid-template-areas:
+    "a" "b" "c"
+    "d" "e" "f"
+    "g" "h" "i"
+    "j" "k" "l"; */
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.NotFound-title {
+  grid-column: 2 / 3;
+  grid-row: 2 /3;
+}
+
+.NotFound-subtitle {
+  grid-area: e;
+}
+
+.NotFound-rows p {
+  grid-area: h;
+}
+
 .btn {
+  grid-area: k;
   z-index: 1;
   overflow: hidden;
   background: transparent;
@@ -61,10 +86,7 @@ h2 {
   }
 }
 @media screen and (max-width: 768px) {
-  body {
-    display: block;
-  }
-  .container {
+  .NotFound {
     margin-top: 70px;
     margin-bottom: 70px;
   }

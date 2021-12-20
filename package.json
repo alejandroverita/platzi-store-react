@@ -7,10 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "homepage": "https://alejandroverita.github.io/platzi-store-react/",
     "predeploy":"npm run build",
     "deploy":"gh-pages -d dist"
-
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandroverita/platzi-store-react.git"
   },
   "author": "Alejandro Vera <alejandroverah97@gmail.com>",
   "license": "MIT",
@@ -19,6 +22,7 @@
     "react",
     "git"
   ],
+  "homepage": "https://alejandroverita.github.io/platzi-store-react/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-runtime": "^7.16.0",

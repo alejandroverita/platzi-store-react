@@ -1,5 +1,14 @@
 @use "./vars";
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 48px);
+  top: 0;
+  position: sticky;
+  background-color: #fff;
+}
+
 .menu {
   display: none;
 }
@@ -8,25 +17,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* width: 100%; */
-
   padding: 0 24px;
   margin-top: 12px;
   border-bottom: 1px solid var(--very-light-pink);
 }
 
-.logo {
+/* .logo {
   width: 100px;
+} */
+
+.navbar-left,
+.navbar-right {
+  display: flex;
 }
 
 .navbar-left ul,
 .navbar-right ul {
   display: flex;
   align-items: center;
-
   height: 60px;
-
   padding: 0;
   margin: 0;
   list-style: none;
@@ -47,11 +56,6 @@
 .navbar-left ul li a:hover {
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
-}
-
-.navbar-left,
-.navbar-right {
-  display: flex;
 }
 
 .navbar-email {
